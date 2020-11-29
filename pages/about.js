@@ -1,5 +1,5 @@
 function About({ post }) {
-  return <div>{ JSON.stringify(post) }</div>;
+  return <div>json : { JSON.stringify(post) }</div>;
 }
 
 export async function getStaticProps() {
