@@ -11,6 +11,6 @@ module.exports = {
     MYSQL_DATABASE : 'test',
     MYSQL_USER : 'roivo',
     MYSQL_PASSWORD : 'gcpsqlnhs10345',
-    WEBAPP_URL : now_server ? 'https://yahoo.co.jp' : 'http://localhost:3000',
+    WEBAPP_URL : process.env.APP_STAGE === 'local' ? 'http://localhost:3000' : 'https://nexttest-ten.vercel.app',
   },
 }
