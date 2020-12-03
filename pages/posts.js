@@ -1,5 +1,15 @@
-function About({ post }) {
-  return <div>json : { JSON.stringify(post) }</div>;
+import Link from 'next/link';
+
+function Pref({ post }) {
+  return (
+    <ul>
+      {
+      post.map((val, key) => (
+        <li key={key}><Link href="/posts/[id]" as={`/posts/${val.pref_id}`}>{val.pref_name}</Link></li>
+      ))
+      }
+    </ul>
+  )
 }
 
 export async function getStaticProps() {
@@ -24,4 +34,4 @@ export async function getStaticProps() {
   };
 }
 
-export default About;
+export default Pref;

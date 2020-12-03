@@ -1,18 +1,14 @@
-import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 // pages/posts/[id].js
 export default function Page({ post }) {
-  
-  const router = useRouter()
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
-  
   return (
     <>
-    <h1>ブログ</h1>
-    <h2>ID: {post.pref_id} の記事</h2>
-    <h3>{post.pref_name}</h3>
+      <h1>{post.pref_name}</h1>
+      <p>{post.pref_name}のIDは{post.pref_id}</p>
+      <p>
+        <Link href="/posts">戻る</Link>
+      </p>
     </>
   )
 }
