@@ -47,5 +47,5 @@ export async function getStaticPaths() {
   // { fallback: false } は、他のルートが404になるという意味
   // { fallback: true } は、他のルートをスクリプトで読み込み表示させる
   // { fallback: 'blocking' } は、他のルートをサーバーサイドで読み込み表示させる
-  return { paths, fallback: 'blocking' };
+  return { paths, fallback: 'true' };
 }
